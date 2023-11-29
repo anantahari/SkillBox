@@ -1,0 +1,1 @@
+docker run --name study-postgres -e POSTGRES_USER=pguser -e POSTGRES_PASSWORD=pgpass -p 5432:5432 postgres
