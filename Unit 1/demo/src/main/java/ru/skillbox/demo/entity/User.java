@@ -1,12 +1,10 @@
 package ru.skillbox.demo.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "`User`") //Добавил эту аннтацию потому что в бзае H2 слово user зарезервировано
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,7 +22,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + 
+        return "User{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

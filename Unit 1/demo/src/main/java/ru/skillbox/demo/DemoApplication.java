@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import ru.skillbox.demo.repository.UserRepository;
 import ru.skillbox.demo.entity.User;
 
+import java.util.List;
+
 @SpringBootApplication
 public class DemoApplication {
 
@@ -24,11 +26,17 @@ public class DemoApplication {
 			repository.save(vasya);
 			repository.save(petya);
 
-			repository.deleteById(1L);
+			List<User> petrovList = repository.findByLastName("Petrov");
 
-			for (User user: repository.findAll()) {
+			for (User user: petrovList) {
 				System.out.println(user);
 			}
+
+//			repository.deleteById(1L);
+//
+//			for (User user: repository.findAll()) {
+//				System.out.println(user);
+//			}
 		};
 	}
 
