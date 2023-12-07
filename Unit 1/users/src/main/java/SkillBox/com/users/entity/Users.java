@@ -26,6 +26,63 @@ public class Users {
     private String hardSkills;
     private String email;
     private String phone;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public String getAboutMe() {
+        return aboutMe;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public String getHardSkills() {
+        return hardSkills;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
     private boolean deleted = Boolean.FALSE;
 
     public Users() {

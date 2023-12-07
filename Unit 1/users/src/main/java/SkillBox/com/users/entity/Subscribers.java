@@ -15,6 +15,23 @@ public class Subscribers {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String userId;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getSubscriberId() {
+        return subscriberId;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
     private String subscriberId;
     private boolean deleted = Boolean.FALSE;
 

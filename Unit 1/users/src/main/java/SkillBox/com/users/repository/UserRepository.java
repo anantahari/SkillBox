@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface UserRepository extends CrudRepository<Users, Long> {
     List<Users> findByLastName(String lastName);
+    List<Users> findAll();
 }
 
 
