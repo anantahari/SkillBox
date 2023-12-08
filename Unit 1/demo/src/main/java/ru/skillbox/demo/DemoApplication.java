@@ -1,5 +1,7 @@
 package ru.skillbox.demo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +14,8 @@ import java.util.List;
 
 @SpringBootApplication
 public class DemoApplication {
+
+	final static Logger logger = LoggerFactory.getLogger(DemoApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -30,6 +34,8 @@ public class DemoApplication {
 
 			for (User user: petrovList) {
 				System.out.println(user);
+				logger.info("log info");
+				logger.trace("log trace");
 			}
 
 //			repository.deleteById(1L);

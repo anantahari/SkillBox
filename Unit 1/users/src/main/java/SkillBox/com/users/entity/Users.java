@@ -104,6 +104,23 @@ public class Users {
         this.deleted = deleted;
     }
 
+    public Users(Long id, String firstName, String lastName, String middleName, String gender, String birthday, String city, String avatar, String aboutMe, String nickname, String hardSkills, String email, String phone, Boolean deleted) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.city = city;
+        this.avatar = avatar;
+        this.aboutMe = aboutMe;
+        this.nickname = nickname;
+        this.hardSkills = hardSkills;
+        this.email = email;
+        this.phone = phone;
+        this.deleted = deleted;
+    }
+
     @Override
     public String toString() {
         return "User{" +
